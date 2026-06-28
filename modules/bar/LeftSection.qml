@@ -2,6 +2,8 @@ import "../../components/widgets"
 import QtQuick
 
 Item {
+    required property var screen
+
     anchors {
         top: parent.top
         bottom: parent.bottom
@@ -12,6 +14,7 @@ Item {
 
     WorkspaceWidget {
         id: workspace
+        screen: parent.screen
         anchors.centerIn: parent
     }
 }

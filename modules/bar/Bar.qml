@@ -1,11 +1,13 @@
 import Quickshell
+import QtQuick
 
 Scope {
-
     Variants {
         model: Quickshell.screens
 
         PanelWindow {
+            id: panel
+
             required property var modelData
             screen: modelData
 
@@ -18,7 +20,9 @@ Scope {
             implicitHeight: 30
 
             LeftSection {
+                screen: panel.screen
             }
+
             RightSection {
             }
         }
