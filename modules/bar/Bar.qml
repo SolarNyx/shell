@@ -1,9 +1,6 @@
-// Bar.qml
-import "../../components/widgets"
 import Quickshell
 
 Scope {
-    // no more time object
 
     Variants {
         model: Quickshell.screens
@@ -20,10 +17,9 @@ Scope {
 
             implicitHeight: 30
 
-            ClockWidget {
-                anchors.centerIn: parent
-
-                // no more time binding
+            LeftSection {
+            }
+            RightSection {
             }
         }
     }
